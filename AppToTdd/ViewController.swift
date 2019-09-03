@@ -30,6 +30,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController {
+    
     //MARK: - Functions
     private func setUpDisplay() {
         quoteViewModel.getRandomImage { (image) in
