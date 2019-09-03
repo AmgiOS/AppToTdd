@@ -9,12 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    //MARK: - Vars
+    let quoteViewModel = QuoteViewModel()
+    
+    //MARK: - @IBoutlets
+    @IBOutlet weak var loadQuoteButton: UIButton!
+    @IBOutlet weak var randomImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
-
+    //MARK: - @IBAction
+    @IBAction func getQuoteAndImageBtn_Touch_Up_Inside(_ sender: UIButton) {
+    }
 }
 

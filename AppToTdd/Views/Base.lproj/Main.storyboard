@@ -36,6 +36,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="getQuoteAndImageBtn_Touch_Up_Inside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gVW-LP-VxW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -50,6 +53,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="loadQuoteButton" destination="HOU-Rh-oH1" id="vGl-l8-Qoo"/>
+                        <outlet property="randomImageView" destination="aKf-RL-Zog" id="7ZV-R6-MqV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
