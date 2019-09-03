@@ -10,25 +10,55 @@ import XCTest
 @testable import AppToTdd
 
 class AppToTddTests: XCTestCase {
-
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testGivenGetQuote_WhenShouldPostFailedCallback_ThenError() {
+        //Given
+        let quoteService = QuoteService(
+            quoteSession: URLSessionFake(data: nil, response: nil, error: FakeResponseData.error),
+            imageSession: URLSessionFake(data: nil, response: nil, error: FakeResponseData.error))
+        //When
+        let expectation = XCTestExpectation(description: "Wait for queue change")
+        quoteService.getQuote { (success, quote) in
+            // Then
+            XCTAssertFalse(success)
+            XCTAssertNil(quote)
+            expectation.fulfill()
         }
+        
+        wait(for: [expectation], timeout: 0.01)
     }
-
+    
+    func testGivenGetQuote_WhenShouldPostFailedResponse_ThenError() {
+        //Given
+        let quoteService = QuoteService(
+            quoteSession: URLSessionFake(data: FakeResponseData.quoteCorrectData, response: FakeResponseData.responseKO, error: nil),
+            imageSession: URLSessionFake(data: FakeResponseData.imageData, response: FakeResponseData.responseKO, error: nil))
+        //When
+        let expectation = XCTestExpectation(description: "Wait for queue change")
+        quoteService.getQuote { (success, quote) in
+            // Then
+            XCTAssertFalse(success)
+            XCTAssertNil(quote)
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 0.01)
+    }
+    
+    func testGivenGetQuote_WhenShouldPostFailedData_ThenError() {
+        //Given
+        let quoteService = QuoteService(
+            quoteSession: URLSessionFake(data: FakeResponseData.quoteIncorrectData, response: FakeResponseData.responseOK, error: nil),
+            imageSession: URLSessionFake(data: nil, response: FakeResponseData.responseOK, error: nil))
+        //When
+        let expectation = XCTestExpectation(description: "Wait for queue change")
+        quoteService.getQuote { (success, quote) in
+            // Then
+            XCTAssertFalse(success)
+            XCTAssertNil(quote)
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 0.01)
+    }
 }

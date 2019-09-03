@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99046887231E938B00022D25 /* URLSessionFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99046886231E938B00022D25 /* URLSessionFake.swift */; };
+		99046889231E939900022D25 /* FakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99046888231E939900022D25 /* FakeResponseData.swift */; };
+		9904688B231E952300022D25 /* QuoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9904688A231E952300022D25 /* QuoteAPI.swift */; };
+		9904688D231E9B1F00022D25 /* Quote.json in Resources */ = {isa = PBXBuildFile; fileRef = 9904688C231E9B1F00022D25 /* Quote.json */; };
 		994A46E623196C3600EAA768 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A46E523196C3600EAA768 /* AppDelegate.swift */; };
 		994A46E823196C3600EAA768 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A46E723196C3600EAA768 /* ViewController.swift */; };
 		994A46EB23196C3600EAA768 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 994A46E923196C3600EAA768 /* Main.storyboard */; };
 		994A46ED23196C3700EAA768 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 994A46EC23196C3700EAA768 /* Assets.xcassets */; };
 		994A46F023196C3700EAA768 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 994A46EE23196C3700EAA768 /* LaunchScreen.storyboard */; };
 		994A46FB23196C3700EAA768 /* AppToTddTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A46FA23196C3700EAA768 /* AppToTddTests.swift */; };
+		994A470D23196E2700EAA768 /* QuoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A470C23196E2700EAA768 /* QuoteService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		99046886231E938B00022D25 /* URLSessionFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionFake.swift; sourceTree = "<group>"; };
+		99046888231E939900022D25 /* FakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeResponseData.swift; sourceTree = "<group>"; };
+		9904688A231E952300022D25 /* QuoteAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteAPI.swift; sourceTree = "<group>"; };
+		9904688C231E9B1F00022D25 /* Quote.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Quote.json; sourceTree = "<group>"; };
 		994A46E223196C3600EAA768 /* AppToTdd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppToTdd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		994A46E523196C3600EAA768 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		994A46E723196C3600EAA768 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +45,7 @@
 		994A46F623196C3700EAA768 /* AppToTddTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppToTddTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		994A46FA23196C3700EAA768 /* AppToTddTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppToTddTests.swift; sourceTree = "<group>"; };
 		994A46FC23196C3700EAA768 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		994A470C23196E2700EAA768 /* QuoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +87,12 @@
 		994A46E423196C3600EAA768 /* AppToTdd */ = {
 			isa = PBXGroup;
 			children = (
-				994A46E523196C3600EAA768 /* AppDelegate.swift */,
+				994A470923196C6500EAA768 /* Supporting Files */,
+				994A470823196C5E00EAA768 /* Models */,
+				994A470723196C5900EAA768 /* ViewModels */,
+				994A470623196C5100EAA768 /* Views */,
+				994A470523196C4300EAA768 /* Controllers */,
 				994A46E723196C3600EAA768 /* ViewController.swift */,
-				994A46E923196C3600EAA768 /* Main.storyboard */,
-				994A46EC23196C3700EAA768 /* Assets.xcassets */,
-				994A46EE23196C3700EAA768 /* LaunchScreen.storyboard */,
-				994A46F123196C3700EAA768 /* Info.plist */,
 			);
 			path = AppToTdd;
 			sourceTree = "<group>";
@@ -92,8 +102,53 @@
 			children = (
 				994A46FA23196C3700EAA768 /* AppToTddTests.swift */,
 				994A46FC23196C3700EAA768 /* Info.plist */,
+				99046886231E938B00022D25 /* URLSessionFake.swift */,
+				99046888231E939900022D25 /* FakeResponseData.swift */,
+				9904688C231E9B1F00022D25 /* Quote.json */,
 			);
 			path = AppToTddTests;
+			sourceTree = "<group>";
+		};
+		994A470523196C4300EAA768 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		994A470623196C5100EAA768 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				994A46EC23196C3700EAA768 /* Assets.xcassets */,
+				994A46EE23196C3700EAA768 /* LaunchScreen.storyboard */,
+				994A46E923196C3600EAA768 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		994A470723196C5900EAA768 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		994A470823196C5E00EAA768 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				994A470C23196E2700EAA768 /* QuoteService.swift */,
+				9904688A231E952300022D25 /* QuoteAPI.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		994A470923196C6500EAA768 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				994A46E523196C3600EAA768 /* AppDelegate.swift */,
+				994A46F123196C3700EAA768 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9904688D231E9B1F00022D25 /* Quote.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +254,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				994A46E823196C3600EAA768 /* ViewController.swift in Sources */,
+				9904688B231E952300022D25 /* QuoteAPI.swift in Sources */,
+				994A470D23196E2700EAA768 /* QuoteService.swift in Sources */,
 				994A46E623196C3600EAA768 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,6 +265,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				994A46FB23196C3700EAA768 /* AppToTddTests.swift in Sources */,
+				99046887231E938B00022D25 /* URLSessionFake.swift in Sources */,
+				99046889231E939900022D25 /* FakeResponseData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +422,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P8N8P57QSQ;
-				INFOPLIST_FILE = AppToTdd/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AppToTdd/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,7 +440,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P8N8P57QSQ;
-				INFOPLIST_FILE = AppToTdd/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AppToTdd/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
