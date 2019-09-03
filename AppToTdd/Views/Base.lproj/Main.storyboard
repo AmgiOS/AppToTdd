@@ -40,21 +40,45 @@
                                     <action selector="getQuoteAndImageBtn_Touch_Up_Inside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gVW-LP-VxW"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12p-XU-chs">
+                                <rect key="frame" x="100" y="499" width="175" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3E5-Ia-w3S">
+                                <rect key="frame" x="50" y="350" width="275" height="134"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="aKf-RL-Zog" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ALR-WP-7mq"/>
+                            <constraint firstItem="12p-XU-chs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="OBs-nM-dNP"/>
                             <constraint firstItem="aKf-RL-Zog" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RJD-hb-MhC"/>
+                            <constraint firstItem="3E5-Ia-w3S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Se7-Mb-AJR"/>
                             <constraint firstItem="aKf-RL-Zog" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Wgo-2r-BnB"/>
                             <constraint firstItem="HOU-Rh-oH1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aFU-yF-KYe"/>
+                            <constraint firstItem="HOU-Rh-oH1" firstAttribute="top" secondItem="12p-XU-chs" secondAttribute="bottom" constant="80" id="kmA-Jg-XJC"/>
+                            <constraint firstItem="12p-XU-chs" firstAttribute="top" secondItem="3E5-Ia-w3S" secondAttribute="bottom" constant="15" id="kxn-UV-8Mz"/>
+                            <constraint firstItem="12p-XU-chs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lvM-Eh-Qqh"/>
                             <constraint firstItem="aKf-RL-Zog" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="o0z-FJ-xKE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HOU-Rh-oH1" secondAttribute="bottom" constant="20" id="pl3-Lk-kZI"/>
+                            <constraint firstItem="3E5-Ia-w3S" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="330" id="qcT-ZT-MBy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aKf-RL-Zog" secondAttribute="bottom" id="xJd-cW-61W"/>
+                            <constraint firstItem="3E5-Ia-w3S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zb2-VO-r8p"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="authorLabel" destination="12p-XU-chs" id="ULZ-xL-ItQ"/>
                         <outlet property="loadQuoteButton" destination="HOU-Rh-oH1" id="vGl-l8-Qoo"/>
+                        <outlet property="quoteTextView" destination="3E5-Ia-w3S" id="8Ef-WR-vmH"/>
                         <outlet property="randomImageView" destination="aKf-RL-Zog" id="7ZV-R6-MqV"/>
                     </connections>
                 </viewController>

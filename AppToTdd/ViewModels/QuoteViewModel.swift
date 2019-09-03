@@ -9,23 +9,24 @@
 import Foundation
 
 class QuoteViewModel {
-    //MARK: - Vars
-    var author: String = "" { didSet {}}
-    var text: String = "" { didSet {}}
-    
     //MARK: - Functions
-    func getQuoteToDisplay() {
+    func getQuoteToDisplay(completion: @escaping (String, String) -> Void) {
         QuoteService.shared.getQuote { (success, quote) in
             if success {
                 if let quote = quote {
-                    self.author = quote.author ?? ""
-                    self.text = quote.text ?? ""
-                    print(quote)
+                   completion(quote.author ?? "", quote.text ?? "")
                 }
             }
         }
     }
     
-    
-    
+    func getRandomImage(completion: @escaping (Data) -> Void) {
+        QuoteService.shared.getImage { (success, image) in
+            if success {
+                if let image = image {
+                    completion(image)
+                }
+            }
+        }
+    }
 }
