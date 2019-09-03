@@ -9,6 +9,8 @@
 import Foundation
 
 class QuoteService {
+    static var shared = QuoteService()
+    private init() {}
     
     //MARK: - Vars
     private let quoteUrl = URL(string: "https://api.forismatic.com/api/1.0/")!
