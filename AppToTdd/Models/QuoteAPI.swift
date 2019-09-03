@@ -11,5 +11,4 @@ import Foundation
 struct Quote: Decodable {
     var text: String?
     var author: String?
-    var imagedata: Data?
 }

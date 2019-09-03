@@ -43,7 +43,7 @@ class QuoteService {
             DispatchQueue.main.async {
                 guard let data = data, error == nil else {
                     callback(false, nil)
-                    print("Error data or \(error?.localizedDescription ?? "")")
+                    print("Error data or \(error!.localizedDescription)")
                     return
                 }
                 
@@ -65,21 +65,26 @@ class QuoteService {
         task?.resume()
         
     }
-    
-    private func getImage(completionHandler: @escaping (Data?) -> Void) {
+}
+
+extension QuoteService {
+    //MARK: - Function
+    func getImage(completionHandler: @escaping (Bool, Data?) -> Void) {
         task?.cancel()
         
         task = imageSession.dataTask(with: pictureUrl) { (data, response, error) in
+            
             DispatchQueue.main.async {
                 guard let data = data, error == nil else {
-                    completionHandler(nil)
+                    completionHandler(false, nil)
                     return
                 }
                 guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                    completionHandler(nil)
+                    completionHandler(false, nil)
                     return
                 }
-                completionHandler(data)
+                
+                completionHandler(true, data)
             }
         }
         task?.resume()
